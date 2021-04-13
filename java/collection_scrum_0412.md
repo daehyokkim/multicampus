@@ -97,10 +97,10 @@
 
 **인스턴스,클래스의 특징** ->>3R
 
-- Respons : 
-- Reuse : 재사용
+- Responsibility : 책임성 
+- Reuse : 재사용성
 
-- Relation : 관계 --> 목적을 위해 chain
+- Relation : 관계 --> 목적을 위해 chain하는 것
 
 ---
 
@@ -127,18 +127,62 @@
      4. `remove(index)` -> D
      5. `size() `: 데이터의 크기 리턴
      6. `Empty()` : 컬렉션이 비어있는지 조사
+   
 2. Set 컬랙션
    - 순서 **X**(모은 데이터를 구분 할 수 없다)
    - 중복 저장 **X**
-   - 
+   
 3. Map 컬랙션
-   - **key값 중복 허락x,value 중복O
+
+   - **key**값 중복 허락x,**value** 중복O
+
+   - Hashtable 
+
+     - 스레드 동기화가 된 상태이다.
+     - 생성 키워드 Hashtable
+
+     ```java
+     Hashtable<K , V> map = new Hashtable<K,V>();
+     ```
+
+   - HashMap
+
+     - 동기화가 되지 않은 상태
+     - 생성 키워드 HashMap
+
+     ```java
+     HashMap<K , V> map = new HashMap<K,V>();
+     ```
+
+   - 주요메서드
+
+     1. `put(K key, V value)` : C
+     2. `get(Object key)` : R
+     3. `remove(Object key)` : D
+
+   - 전체 조회를 할 시
+
+   ```java
+   	public void printAll(HashMap<String, Integer> map) {
+   		Set<String> keys = map.keySet(); //순서가없고 중복이 없음
+   		Iterator<String> iter = keys.iterator(); //한줄로 세우기
+   		while(iter.hasNext()) {
+   			String key = iter.next();
+   			Integer value =map.get(key);
+   			System.out.println("("+key+","+value+")");
+   		}
+       }
+   ```
+
+   
+
+   
 
 ---
 
 ### 2. 스트림
 
-> 내부에서 외부 데이터를 주고 받을  때 사용하는 것
+> 데이터를 외부에서 보내고 가져오는 통로를 이야기한다.
 >
 > 연속적인 데이터의 흐름!!
 
@@ -155,7 +199,7 @@
 
 2.3 보조 스트림(filter) & 출력 스트림(Sinker)
 
-- 보조 스트림
+- 보조 스트림(filter)
   - 여러가지 편리 기능을 제공해주는 스트림
   - 다른 filter와 연결 가능 -> Chain
 - 출력 스트림(Sinker)
