@@ -1,0 +1,18 @@
+CREATE TABLE gisaTBL(
+	stdNo NUMBER NOT NULL PRIMARY KEY,
+	email VARCHAR2(50),
+	kor NUMBER,
+	eng NUMBER,
+	math NUMBER,
+	sci NUMBER,
+	hist NUMBER,
+	total NUMBER,
+	mgrCode VARCHAR2(50),
+	accCode VARCHAR2(50),
+	localCode VARCHAR2(50)
+	
+);
+
+select * from gisaTBL;
+
+drop table gisaTBL;
