@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<!-- header id를 가진 태그의 바탕과 글 색갈을 변경해보자~ -->
+	<script>
+		window.onload = function(){
+			var header = document.getElementById('header');
+			header.style.color = "orange";
+			header.style.background = "red";
+			header.innerHTML = "From javascript";
+		};
+	</script>
+	<!-- innerHTMP을 사용하여 HTML 태그를 적용하여 내부 글잘 변경하기 -->
+	<script>
+		window.onload = function(){
+			var output = '';
+			for(var i=0;i<10;i++){
+				output += '<h1>header - ' + i + '</h1>';				
+				//document.body.textContent = output;
+				//innerHTML을 통해 태그문으로 출력
+				document.body.innerHTML = output;
+			}
+		};
+	</script>
+</head>
+<body>
+	<h1 id="header">Header</h1>
+</body>
+</html>
