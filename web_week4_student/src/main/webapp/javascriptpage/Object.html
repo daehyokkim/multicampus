@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			var f1 = function(data){
+				alert("hi"+data);
+			};
+			var data = 10;
+			
+			function callTemTime(callback){
+				for(var i =0;i<2;i++){
+					callback();
+				}
+			}
+			/*callTemTime(function (){
+				alert("함수 호출");
+			});*/
+		    // product라는 객체를 생성해봄
+			var product = {
+				      제품명 : '망고',
+				      유형 : '절임',
+				      성분 : ['건망고','설탕']
+				    };
+			   //product객체에서 특정key값인 '제품명'이 가지고 있는 값을 출력
+			   alert('제품명'+':'+product['제품명'])
+			   
+			   for(var i in product){
+				   alert(i+':'+product[i]);
+			   }
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>
