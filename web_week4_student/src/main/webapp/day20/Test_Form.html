@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function checkId(){
+			var userId = document.getElementById("userId");
+			alert(userId.value+" 확인");
+		}
+		//2번째 확인버튼
+		function checkPwd1(){
+			var pwd = document.getElementById("userPw");
+			alert(pwd.value);
+		}
+		function checkPwd(){
+			var pwd = document.getElementById("userPw");
+			var pwd2 = document.getElementById("userPw2");
+			if(pwd.value == pwd2.value){
+				alert("동일합니다.");
+			}
+			else{
+				alert("비밀번호를 확인해주세요.");
+			}
+		}
+		function checkgender(){
+			var gender = document.getElementsByName("gender");
+			console.log(gender);
+			for(var i =0;i<gender.length;i++){
+				if(gender[i].checked){					
+					alert(gender[i].value);
+				}
+			}
+			//alert("gender" + gender.length);
+		}
+		function checkLang(){
+			var langs = document.getElementsByName("lang");
+			alert("langs" + langs.length);
+		}
+		function checkHobby(){
+			var hobby = document.getElementById("hobby");
+				alert(hobby.value);		
+		}
+		function checkData(){
+			var count = 0;
+			var langs = document.getElementsByName("lang");
+			alert("adasd"+langs.length);
+			for(var i=0;i< langs.length;i++){
+				if(langs[i].checked){
+					alert(i);
+					count++;						
+				}
+				}
+			
+			if(count >= 2){
+				alert("2개이상");
+				return true;
+			}
+			else{
+				alert("2개이상 선택하시오");
+			}
+			return false;
+		}
+	</script>
+</head>
+<body>
+	<form action="" method="get" onsubmit = "return checkData();">
+			 <table>
+			 	<tr>
+			 		<td>userId :</td>
+			 		<td><input type="text" id="userId" name="id"/></td>
+			 		<td><button onclick="checkId();">확인</button></td>
+			 	</tr>
+			 	<tr>
+			 		<td>pwd1 :</td>
+			 		<td><input type="password" id="userPw" name="pw" value="12345"/></td>
+			 		<td><button onclick="checkPwd1();">확인</button></td>
+			 	</tr>
+			 	<tr>
+			 		<td>pwd2 :</td>
+			 		<td><input type="password" id="userPw2" name="pw2" value="12345"/></td>
+			 		<td><button onclick="checkPwd()" >확인</button></td>
+			 	</tr>
+			 	<tr>
+			 		<td>성별 :</td>
+			 		<td><input type="radio" id="gender1" name="gender" value="m"/>남
+			 			<input type="radio" id="gender2" name="gender" value="F"/>여</td>
+			 		<td><button onclick="checkgender();">확인</button></td>
+			 	</tr>
+			 	<tr>
+			 		<td>사용언어 :</td>
+			 		<td><input type="checkbox" id="" name="lang" value="1"/>JAVA
+						<input type="checkbox" id="" name="lang"value="2"/>SQL
+						<input type="checkbox" id="" name="lang"value="3"/>JS
+						<input type="checkbox" id="" name="lang"value="4"/>Python</td>
+			 		<td><button onclick="checkLang();">확인</button></td>
+			 	</tr>
+			 	<tr>
+			 		<td>취미 :</td>
+			 		<td><select id = "hobby" name="hobby" onchange="checkSelect();">
+			 				<option value="0"/>--선택--
+							<option value="1"/>코딩
+							<option value="2"/>븐석
+							<option value="3"/>테스트
+							<option value="4"/>설계
+						</select>
+					</td>
+			 		<td><button onclick="checkHobby();">확인</button></td>
+			 	</tr>
+			 	<tr>
+			 		<td>
+			 			<input type="submit" value="전송"/><br/>
+			 		</td>
+			 	</tr>
+			 	
+			 </table>
+		
+	</form>
+</body>
+</html>
