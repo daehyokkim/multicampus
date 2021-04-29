@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <servlet>
-  	<servlet-name>myservlet</servlet-name>
+  	<!-- 3.myservlet 발견!!  -->
+  	<servlet-name>Myservlet</servlet-name>
+  	<!--4. mc.sn.servlet.First_Servlet이쪽으로 이동을 하기~~  -->
   	<servlet-class>mc.sn.servlet.First_Servlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>myservlet</servlet-name>
+  	<!-- 1.servlet-name있는 myservlet를 내부에서 찾기!!  -->
+  	<servlet-name>Myservlet</servlet-name>
+  	<!-- 2. <url-pattern>태그에 명시된 경로"/"를 찾아보아!!!-->
   	<url-pattern>/</url-pattern>
   </servlet-mapping>
 </web-app>
