@@ -82,3 +82,19 @@ client -> servlet(클라이언트의 요청 및 view에 전달 판단) -> servic
 
 - DB에 무리를 주지않고 관리하도록 하는 것
 
+
+
+### 뒷이야기 :v:
+
+- 오늘은 war파일로 프로젝트를 만들어 오늘 배운 내용을 배포해보기 로 했다!~!!
+
+- WAR 파일도 JAVA의 JAR 옵션( java - jar)을 이용해 생성하는 JAR파일의 일종이라고 하고
+
+  쉽게 어플리케이션을 배포 할 수있어 좋은거같다!!
+
+**실습내용**
+
+hr유저의 jobs데이터 베이스에서 정보를 읽어와 리스트 값을 화면에 뿌려주기
+
+[.war 파일](https://github.com/daehyokkim/multicampus/blob/main/javaCodeFile/testmvc.war)
+
