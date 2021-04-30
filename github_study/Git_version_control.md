@@ -99,7 +99,10 @@ commit하기 위한 stage에 파일 추가
 
 "Modify file content in ..." --> 수정 메시지.
 
+**20210501** 추가 commti 정보
 
+- 커밋 메시지를 잘못 적었을 때 `git push`이전, 이후 상황 수정 방법에 좋은 링크를 찾아 추가한다!!
+  - [git commit 수정 방법](https://velog.io/@mayinjanuary/git-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%84%B8%EC%A7%80-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0-changing-commit-message)
 
 #### 5. git config 
 
